@@ -31,6 +31,9 @@ namespace Hashtable
             hash.Add("16", "paranoid");
             hash.Add("17", "avoidable");
             hash.Add("18", "situations");
+            //hash.Remove("17");
+            string hashAvoidable=hash.Get("17");
+            Console.WriteLine(hashAvoidable);
             Console.ReadKey();
         }
     }
