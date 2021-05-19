@@ -12,6 +12,7 @@ namespace Hashtable
         {
             Console.WriteLine("Hash table demo"); 
             MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
+<<<<<<< HEAD
             hash.Add("0", "Paranoids");
             hash.Add("1", "are");
             hash.Add("2", "not");
@@ -34,6 +35,11 @@ namespace Hashtable
             //hash.Remove("17");
             string hashAvoidable=hash.Get("17");
             Console.WriteLine(hashAvoidable);
+=======
+            const string PARAGRAPH = "to be or not to be";
+            Console.WriteLine("Input Paragraph is:: '"+PARAGRAPH+"'");
+            hash.FindFrequency(PARAGRAPH, "be");
+>>>>>>> UC1
             Console.ReadKey();
         }
     }
