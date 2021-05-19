@@ -8,7 +8,6 @@ namespace Hashtable
 {
     class MyMapNode <K, V>
     {
-
         private readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
         public MyMapNode(int size)
