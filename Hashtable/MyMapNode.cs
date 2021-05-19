@@ -70,6 +70,25 @@ namespace Hashtable
                 linkedList.Remove(foundItem);
             }
         }
+        public void FindFrequency(string para,string value )
+        {
+            string[] paragraph = para.Split(' ');
+            MyMapNode<string, int> hashTable = new MyMapNode<string, int>(paragraph.Length);
+            foreach(string word in paragraph )
+            {
+                if (hashTable.Get(word) != null)
+                {
+                    int count = hashTable.Get(word);
+                    hashTable.Remove(word);
+                    hashTable.Add(word, count + 1);
+                }
+                else
+                {
+                    hashTable.Add(word, 1);
+                }
+            }
+            Console.WriteLine("Frequency of '"+value+"' is "+hashTable.Get(value));
+        }
     }
     public struct KeyValue<k, v>
     {
